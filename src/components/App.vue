@@ -1,13 +1,14 @@
 
 <template>
   <div :key="dog.index" v-for="dog in dogs">
-    <h1 class="text-2xl">{{ dog.breed }}</h1>
+    <BreedCard breed="dog.breed" />
   </div>
 </template>
 
 <script>
 // import DisplayBreeds from './DisplayBreeds.vue';
 import dogs from '../dogs.js';
+import BreedCard from './BreedCard.vue';
 
 export default {
   name: 'App',
