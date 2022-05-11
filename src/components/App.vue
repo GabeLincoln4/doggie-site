@@ -3,7 +3,7 @@
   <h1 :class="titleStyle">Doggies 101</h1>
   <div :class="containerStyle">
     <div :class="cardStyle" :key="dog.index" v-for="dog in dogs">
-      <BreedCard :breed="dog.breed" :photo="dog.photo" :isHypoallergenic="dog.isHypoallergenic" />
+      <BreedCard :breed="dog.breed" :photo="dog.photo" :isHypoallergenic="determineHypoallergy(dog.isHypoallergenic)" />
     </div>
   </div>
 </template>
@@ -17,12 +17,21 @@ export default {
     name: "App",
     data() {
         return {
-            titleStyle: "bg-blue-700 font-bold p-3 text-4xl md:text-5xl xl:text-6xl text-center text-white",
+            titleStyle: "bg-blue-700 font-bold p-3 md:pb-4 lg:pb-5 text-4xl md:text-5xl xl:text-6xl text-center text-white",
             dogs: dogs,
             containerStyle: "bg-yellow-100 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 justify-items-center p-3",
             cardStyle: "bg-green-300 xl:col-span-2 grid h-auto w-64 xl:w-5/6 justify-items-center my-3 p-3 rounded-xl shadow-xl",
         };
     },
+    methods: {
+      determineHypoallergy(isHypoallergenic) {
+        if (isHypoallergenic) {
+          return "Yes";
+        } else {
+          return "No";
+        }
+      }
+    },  
     components: { BreedCard }
 }
 
