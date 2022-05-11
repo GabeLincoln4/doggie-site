@@ -3,7 +3,7 @@
   <h1 :class="titleStyle">Doggies 101</h1>
   <div :class="containerStyle">
     <div :class="cardStyle" :key="dog.index" v-for="dog in dogs">
-      <BreedCard :breed="dog.breed" :photo="dog.photo" :isHypoallergenic="determineHypoallergy(dog.isHypoallergenic)" />
+      <BreedCard :breed="dog.breed" :photo="dog.photo" :isHypoallergenic="determineHypoallergy(dog.isHypoallergenic)" :attribution="dog.attribution" />
     </div>
   </div>
 </template>
