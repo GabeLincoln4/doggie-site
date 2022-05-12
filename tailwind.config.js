@@ -6,7 +6,15 @@ module.exports = {
     theme: {
       extend: {},
       fontSize: {
-        'tiny': '.6rem'
+        'tiny': '.6rem',
+        'sm': '0.875rem',
+        'lg': '1.125rem',
+        'xl': '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '1.875rem',
+        '4xl': '2.25rem',
+        '5xl': '3rem',
+        '6xl': '3.75rem',
       }
     },
     plugins: [],

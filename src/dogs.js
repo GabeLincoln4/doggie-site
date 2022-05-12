@@ -1,5 +1,4 @@
 const dogs = [
-    {breed: "Barbet", photo: './assets/barbet.jpg', isHypoallergenic: true, attribution: "Photo by quokkabottles on Unsplash"}, 
     {breed: "Chihuahua", photo: './assets/chihuahua.jpg', isHypoallergenic: false, attribution: "Photo by Robina Weermeijer on Unsplash"},
     {breed: "German Shepherd", photo: './assets/german-shepherd.jpg', isHypoallergenic: false, attribution: "Photo by Sofia Guaico on Unsplash"},
     {breed: "Golden Retriever", photo: './assets/golden-retriever.jpg', isHypoallergenic: false, attribution: "Photo by Richard Burlton on Unsplash"},
